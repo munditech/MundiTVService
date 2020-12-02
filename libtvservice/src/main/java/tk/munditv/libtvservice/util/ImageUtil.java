@@ -1,4 +1,4 @@
-package tk.munditv.mcontroller.util;
+package tk.munditv.libtvservice.util;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,8 +17,6 @@ import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-
-import tk.munditv.libtvservice.util.FileUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;

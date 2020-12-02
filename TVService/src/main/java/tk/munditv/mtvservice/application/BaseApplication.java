@@ -16,7 +16,7 @@ import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.libtvservice.util.PInfo;
 import tk.munditv.libtvservice.util.Packages;
 
-import static tk.munditv.mtvservice.util.ImageUtil.initImageLoader;
+import static tk.munditv.libtvservice.util.ImageUtil.initImageLoader;
 
 public class BaseApplication extends Application {
 
