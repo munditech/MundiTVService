@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import tk.munditv.libtvservice.util.PInfo;
-import tk.munditv.mcontroller.dmc.DMCControl;
+import tk.munditv.libtvservice.dmc.DMCControl;
 import tk.munditv.mcontroller.R;
 import tk.munditv.mcontroller.app.MainApplication;
 

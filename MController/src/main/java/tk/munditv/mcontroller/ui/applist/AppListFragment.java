@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import tk.munditv.mcontroller.dmc.DMCControl;
+import tk.munditv.libtvservice.dmc.DMCControl;
 import tk.munditv.mcontroller.R;
 import tk.munditv.mcontroller.app.MainApplication;
 import tk.munditv.mcontroller.view.AppListAdapter;

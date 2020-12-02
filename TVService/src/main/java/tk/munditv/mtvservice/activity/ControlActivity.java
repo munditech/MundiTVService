@@ -28,7 +28,7 @@ import tk.munditv.libtvservice.util.Action;
 import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.libtvservice.util.Utils;
 import tk.munditv.mtvservice.R;
-import tk.munditv.mtvservice.dmc.DMCControl;
+import tk.munditv.libtvservice.dmc.DMCControl;
 
 public class ControlActivity extends AppCompatActivity implements OnClickListener {
 

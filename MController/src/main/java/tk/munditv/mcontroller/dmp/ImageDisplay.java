@@ -43,8 +43,8 @@ import tk.munditv.libtvservice.util.FileUtil;
 import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.libtvservice.util.ShakeListener;
 import tk.munditv.mcontroller.R;
-import tk.munditv.mcontroller.dmc.DMCControl;
-import tk.munditv.mcontroller.dmc.GenerateXml;
+import tk.munditv.libtvservice.dmc.DMCControl;
+import tk.munditv.libtvservice.dmc.GenerateXml;
 import tk.munditv.mcontroller.util.ImageUtil;
 
 public class ImageDisplay extends AppCompatActivity implements OnClickListener,
