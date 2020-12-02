@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="tk.munditv.mcontroller.ui.applist.AppListFragment"
+        android:label="@string/title_applist"
+        tools:layout="@layout/fragment_applist" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="tk.munditv.mcontroller.ui.controller.ControllerFragment"
+        android:label="@string/title_controller"
+        tools:layout="@layout/fragment_controller" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="tk.munditv.mcontroller.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>

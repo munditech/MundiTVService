@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "tk.munditv.mtvservice"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName '1.0.2'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionNameSuffix 'v'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url 'http://4thline.org/m2'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha1'
+    implementation 'org.slf4j:slf4j-jdk14:2.0.0-alpha1'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.8.6'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.2"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
+    implementation('com.google.apis:google-api-services-youtube:v3-rev99-1.17.0-rc'){
+        exclude group: 'com.google.guava'
+        exclude group: 'org.apache.httpcomponents'
+        exclude group: 'com.google.code.findbugs'
+        exclude group: 'com.google.http-client', module: 'google-http-client-jackson2'
+    }
+    implementation('com.google.api-client:google-api-client-android:1.30.10') {
+        exclude group: 'com.google.guava'
+        exclude group: 'org.apache.httpcomponents'
+        exclude group: 'com.google.code.findbugs'
+        exclude group: 'com.google.http-client', module: 'google-http-client-jackson2'
+    }
+    implementation 'org.seamless:seamless-xml:1.0-alpha3'
+    implementation 'org.seamless:seamless-http:1.0-alpha3'
+    implementation 'org.seamless:seamless-util:1.0-alpha3'
+    implementation project(path: ':libclingupnp')
+    implementation project(path: ':libtvservice')
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

@@ -1,0 +1,5 @@
+include ':libtvservice'
+include ':libclingupnp'
+include ':MController'
+include ':TVService'
+rootProject.name = "MundiTVService"
