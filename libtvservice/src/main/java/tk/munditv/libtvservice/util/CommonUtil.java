@@ -1,5 +1,5 @@
 //from Allshare
-package tk.munditv.mtvservice.util;
+package tk.munditv.libtvservice.util;
 
 import android.content.Context;
 import android.media.MediaPlayer;

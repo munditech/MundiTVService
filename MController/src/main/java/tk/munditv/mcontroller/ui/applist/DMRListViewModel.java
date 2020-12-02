@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
 
-import tk.munditv.mcontroller.dmp.DeviceItem;
+import tk.munditv.libtvservice.dmp.DeviceItem;
 import tk.munditv.mcontroller.app.MainApplication;
 
 public class DMRListViewModel extends ViewModel

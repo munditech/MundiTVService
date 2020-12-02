@@ -1,8 +1,8 @@
-package tk.munditv.mcontroller.util;
+package tk.munditv.libtvservice.util;
 
 import org.fourthline.cling.android.AndroidUpnpService;
 
-import tk.munditv.mcontroller.dmp.DeviceItem;
+import tk.munditv.libtvservice.dmp.DeviceItem;
 
 public class NetworkData {
 

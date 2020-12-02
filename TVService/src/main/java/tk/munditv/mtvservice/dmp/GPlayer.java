@@ -42,9 +42,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 
+import tk.munditv.libtvservice.util.Action;
+import tk.munditv.libtvservice.util.Utils;
 import tk.munditv.mtvservice.R;
-import tk.munditv.mtvservice.util.Action;
-import tk.munditv.mtvservice.util.Utils;
 
 public class GPlayer extends AppCompatActivity implements OnCompletionListener, OnErrorListener,
         OnInfoListener, OnPreparedListener, OnSeekCompleteListener, OnVideoSizeChangedListener,

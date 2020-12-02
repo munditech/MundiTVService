@@ -12,14 +12,12 @@ import android.preference.PreferenceScreen;
 import android.view.KeyEvent;
 
 import tk.munditv.mtvservice.R;
-import tk.munditv.mtvservice.util.PreferenceHead;
 
 public class SettingActivity extends PreferenceActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.preference);
-		addTitleBar();
 		Intent intent = new Intent("tk.munditv.mtvservice.action.START");
 		sendBroadcast(intent);
 	}
@@ -65,13 +63,6 @@ public class SettingActivity extends PreferenceActivity {
 		SharedPreferences prefs = PreferenceManager
 				.getDefaultSharedPreferences(context);
 		return Integer.valueOf(prefs.getString("image_slide_time", "5"));
-	}
-
-	private void addTitleBar() {
-		PreferenceScreen preferenceScreen = getPreferenceScreen();
-		PreferenceHead ph = new PreferenceHead(this);
-		ph.setOrder(0);
-		preferenceScreen.addPreference(ph);
 	}
 
 	@Override

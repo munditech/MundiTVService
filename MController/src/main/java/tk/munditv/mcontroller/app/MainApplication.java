@@ -28,15 +28,15 @@ import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 
-import tk.munditv.mcontroller.dmp.DeviceItem;
-import tk.munditv.mcontroller.util.ConfigData;
-import tk.munditv.mcontroller.util.NetworkData;
+import tk.munditv.libtvservice.dmp.DeviceItem;
+import tk.munditv.libtvservice.util.ConfigData;
+import tk.munditv.libtvservice.util.NetworkData;
+import tk.munditv.libtvservice.util.PInfo;
+import tk.munditv.libtvservice.util.Packages;
 import tk.munditv.mcontroller.SettingsActivity;
 import tk.munditv.mcontroller.dmr.MOSMediaRenderer;
 import tk.munditv.mcontroller.dms.MediaServer;
 import tk.munditv.mcontroller.ui.applist.DMRListCallback;
-import tk.munditv.mcontroller.util.PInfo;
-import tk.munditv.mcontroller.util.Packages;
 
 public class MainApplication extends Application {
 

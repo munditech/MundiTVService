@@ -16,8 +16,8 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.Abs
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.utils.YouTubePlayerUtils;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
+import tk.munditv.libtvservice.util.FullScreenHelper;
 import tk.munditv.mtvservice.R;
-import tk.munditv.mtvservice.util.FullScreenHelper;
 
 public class YTPlayerActivity extends AppCompatActivity {
     private static final String TAG = "YTPlayer";

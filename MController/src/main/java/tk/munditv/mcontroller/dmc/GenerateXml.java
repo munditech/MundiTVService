@@ -22,7 +22,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import tk.munditv.mcontroller.dmp.ContentItem;
+import tk.munditv.libtvservice.dmp.ContentItem;
 
 import static org.fourthline.cling.model.XMLUtil.appendNewElement;
 import static org.fourthline.cling.model.XMLUtil.appendNewElementIfNotNull;

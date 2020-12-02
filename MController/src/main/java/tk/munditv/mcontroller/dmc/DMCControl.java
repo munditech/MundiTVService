@@ -18,6 +18,10 @@ import org.fourthline.cling.model.types.UDAServiceType;
 
 import java.util.ArrayList;
 
+import tk.munditv.libtvservice.dmp.DeviceItem;
+import tk.munditv.libtvservice.util.Action;
+import tk.munditv.libtvservice.util.AppListListener;
+import tk.munditv.libtvservice.util.PInfo;
 import tk.munditv.mcontroller.R;
 import tk.munditv.mcontroller.dmc.callback.CurrentConnectionInfoCallback;
 import tk.munditv.mcontroller.dmc.callback.GetCommandCallback;
@@ -37,10 +41,6 @@ import tk.munditv.mcontroller.dmc.callback.SetCommandCallback;
 import tk.munditv.mcontroller.dmc.callback.SetMuteCalllback;
 import tk.munditv.mcontroller.dmc.callback.SetVolumeCallback;
 import tk.munditv.mcontroller.dmc.callback.StopCallback;
-import tk.munditv.mcontroller.dmp.DeviceItem;
-import tk.munditv.mcontroller.util.Action;
-import tk.munditv.mcontroller.util.AppListListener;
-import tk.munditv.mcontroller.util.PInfo;
 
 public class DMCControl {
 

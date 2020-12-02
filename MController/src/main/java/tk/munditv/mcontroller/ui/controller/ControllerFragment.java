@@ -10,8 +10,8 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import tk.munditv.libtvservice.dmp.DeviceItem;
 import tk.munditv.mcontroller.dmc.DMCControl;
-import tk.munditv.mcontroller.dmp.DeviceItem;
 import tk.munditv.mcontroller.R;
 import tk.munditv.mcontroller.app.MainApplication;
 

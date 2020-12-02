@@ -36,15 +36,16 @@ import org.fourthline.cling.android.AndroidUpnpService;
 import java.io.File;
 import java.util.ArrayList;
 
+import tk.munditv.libtvservice.dmp.ContentItem;
+import tk.munditv.libtvservice.dmp.DeviceItem;
+import tk.munditv.libtvservice.util.ConfigData;
+import tk.munditv.libtvservice.util.FileUtil;
+import tk.munditv.libtvservice.util.NetworkData;
+import tk.munditv.libtvservice.util.ShakeListener;
 import tk.munditv.mtvservice.R;
 import tk.munditv.mtvservice.dmc.DMCControl;
 import tk.munditv.mtvservice.dmc.GenerateXml;
-import tk.munditv.mtvservice.util.ConfigData;
-import tk.munditv.mtvservice.util.FileUtil;
 import tk.munditv.mtvservice.util.ImageUtil;
-import tk.munditv.mtvservice.util.NetworkData;
-import tk.munditv.mtvservice.util.ShakeListener;
-import tk.munditv.mtvservice.util.ShakeListener.OnShakeListener;
 
 public class ImageDisplay extends AppCompatActivity implements OnClickListener,
 		OnTouchListener {
@@ -456,7 +457,7 @@ public class ImageDisplay extends AppCompatActivity implements OnClickListener,
 
 	private void addShake() {
 		ShakeListener shakeListener = new ShakeListener(this);
-		shakeListener.setOnShakeListener(new OnShakeListener() {
+		shakeListener.setOnShakeListener(new ShakeListener.OnShakeListener() {
 
 			@Override
 			public void onShake() {

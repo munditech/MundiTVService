@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tk.munditv.mtvservice.util;
+package tk.munditv.libtvservice.util;
 
 import android.util.Log;
 

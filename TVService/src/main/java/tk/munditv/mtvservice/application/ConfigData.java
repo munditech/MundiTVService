@@ -3,7 +3,7 @@ package tk.munditv.mtvservice.application;
 
 import java.util.ArrayList;
 
-import tk.munditv.mtvservice.dmp.ContentItem;
+import tk.munditv.libtvservice.dmp.ContentItem;
 
 
 public class ConfigData {

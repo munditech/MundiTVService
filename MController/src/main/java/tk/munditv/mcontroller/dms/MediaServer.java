@@ -20,13 +20,11 @@ import org.fourthline.cling.model.types.UDN;
 
 import java.io.IOException;
 
-import tk.munditv.mcontroller.dms.ContentDirectoryService;
-import tk.munditv.mcontroller.dms.HttpServer;
+import tk.munditv.libtvservice.util.FileUtil;
+import tk.munditv.libtvservice.util.UpnpUtil;
+import tk.munditv.libtvservice.util.Utils;
 import tk.munditv.mcontroller.SettingsActivity;
 import tk.munditv.mcontroller.app.MainApplication;
-import tk.munditv.mcontroller.util.FileUtil;
-import tk.munditv.mcontroller.util.UpnpUtil;
-import tk.munditv.mcontroller.util.Utils;
 
 public class MediaServer {
 

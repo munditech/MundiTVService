@@ -1,4 +1,4 @@
-package tk.munditv.mtvservice.util;
+package tk.munditv.libtvservice.util;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

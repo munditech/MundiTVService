@@ -1,4 +1,4 @@
-package tk.munditv.mtvservice.util;
+package tk.munditv.libtvservice.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.regex.Pattern;
 
-import tk.munditv.mtvservice.dmp.ContentItem;
+import tk.munditv.libtvservice.dmp.ContentItem;
 
 public class Utils {
 

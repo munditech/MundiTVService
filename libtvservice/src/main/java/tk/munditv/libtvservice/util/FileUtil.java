@@ -1,4 +1,4 @@
-package tk.munditv.mcontroller.util;
+package tk.munditv.libtvservice.util;
 
 import android.content.Context;
 import android.os.Environment;
@@ -11,7 +11,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import tk.munditv.mcontroller.util.DevMountInfo.DevInfo;
+import tk.munditv.libtvservice.util.DevMountInfo.DevInfo;
 
 public class FileUtil {
 

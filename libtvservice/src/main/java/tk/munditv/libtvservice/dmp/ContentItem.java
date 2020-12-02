@@ -1,4 +1,4 @@
-package tk.munditv.mtvservice.dmp;
+package tk.munditv.libtvservice.dmp;
 
 import android.util.Log;
 

@@ -1,4 +1,4 @@
-package tk.munditv.mcontroller.util;
+package tk.munditv.libtvservice.util;
 
 import android.app.Application;
 import android.util.Log;

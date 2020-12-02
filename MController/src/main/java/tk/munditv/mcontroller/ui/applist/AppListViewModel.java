@@ -8,8 +8,8 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.ArrayList;
 
-import tk.munditv.mcontroller.util.AppListListener;
-import tk.munditv.mcontroller.util.PInfo;
+import tk.munditv.libtvservice.util.AppListListener;
+import tk.munditv.libtvservice.util.PInfo;
 
 public class AppListViewModel extends ViewModel
     implements AppListListener {

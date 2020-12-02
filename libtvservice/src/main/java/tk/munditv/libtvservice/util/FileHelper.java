@@ -1,4 +1,4 @@
-package tk.munditv.mtvservice.util;
+package tk.munditv.libtvservice.util;
 
 import android.content.ContentResolver;
 import android.content.Context;

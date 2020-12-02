@@ -10,11 +10,11 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import tk.munditv.mtvservice.dmp.ContentItem;
-import tk.munditv.mtvservice.dmp.DeviceItem;
-import tk.munditv.mtvservice.util.NetworkData;
-import tk.munditv.mtvservice.util.PInfo;
-import tk.munditv.mtvservice.util.Packages;
+import tk.munditv.libtvservice.dmp.ContentItem;
+import tk.munditv.libtvservice.dmp.DeviceItem;
+import tk.munditv.libtvservice.util.NetworkData;
+import tk.munditv.libtvservice.util.PInfo;
+import tk.munditv.libtvservice.util.Packages;
 
 import static tk.munditv.mtvservice.util.ImageUtil.initImageLoader;
 

@@ -30,11 +30,11 @@ import java.net.URI;
 
 import tk.munditv.libtvservice.support.tvcontrol.lastchange.ChannelPackages;
 import tk.munditv.libtvservice.support.tvcontrol.lastchange.TVControlVariable;
+import tk.munditv.libtvservice.util.Action;
+import tk.munditv.libtvservice.util.ConfigData;
+import tk.munditv.libtvservice.util.PInfo;
 import tk.munditv.mtvservice.dmp.GPlayer;
 import tk.munditv.mtvservice.dmp.GPlayer.MediaListener;
-import tk.munditv.mtvservice.util.Action;
-import tk.munditv.mtvservice.util.ConfigData;
-import tk.munditv.mtvservice.util.PInfo;
 
 /**
  * @author offbye

@@ -11,9 +11,9 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
+import tk.munditv.libtvservice.util.Action;
 import tk.munditv.mcontroller.dmp.GPlayer;
 import tk.munditv.mcontroller.dmp.ImageDisplay;
-import tk.munditv.mcontroller.util.Action;
 
 public class RenderPlayerService extends Service {
 

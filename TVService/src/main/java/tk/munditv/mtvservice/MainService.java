@@ -28,10 +28,10 @@ import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 
-import tk.munditv.mtvservice.util.NetworkData;
+import tk.munditv.libtvservice.dmp.DeviceItem;
+import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.mtvservice.activity.SettingActivity;
 import tk.munditv.mtvservice.application.BaseApplication;
-import tk.munditv.mtvservice.dmp.DeviceItem;
 import tk.munditv.mtvservice.dmr.MOSMediaRenderer;
 
 public class MainService extends Service {

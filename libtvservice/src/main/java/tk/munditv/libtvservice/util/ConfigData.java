@@ -1,9 +1,9 @@
 
-package tk.munditv.mcontroller.util;
+package tk.munditv.libtvservice.util;
 
 import java.util.ArrayList;
 
-import tk.munditv.mcontroller.dmp.ContentItem;
+import tk.munditv.libtvservice.dmp.ContentItem;
 
 public class ConfigData {
     public static int photoPosition = 0;

@@ -24,7 +24,7 @@ import org.seamless.util.URIUtil;
 import java.net.URI;
 import java.util.Map;
 
-import tk.munditv.mcontroller.util.Utils;
+import tk.munditv.libtvservice.util.Utils;
 
 /**
  * @author offbye

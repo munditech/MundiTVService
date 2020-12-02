@@ -6,7 +6,7 @@
  * Date:  2013-4-11 上午10:33:17
  */
 
-package tk.munditv.mcontroller.util;
+package tk.munditv.libtvservice.util;
 
 public class Action {
 	public static final String DMR = "tk.munditv.ottservice.action.dmr";

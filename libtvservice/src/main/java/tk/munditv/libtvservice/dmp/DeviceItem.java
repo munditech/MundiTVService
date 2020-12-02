@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package tk.munditv.mtvservice.dmp;
+package tk.munditv.libtvservice.dmp;
 
 import android.graphics.drawable.Drawable;
 import android.util.Log;

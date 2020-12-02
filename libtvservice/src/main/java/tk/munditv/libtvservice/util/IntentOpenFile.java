@@ -1,5 +1,5 @@
 
-package tk.munditv.mcontroller.util;
+package tk.munditv.libtvservice.util;
 
 import android.content.Intent;
 import android.net.Uri;

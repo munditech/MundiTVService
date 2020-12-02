@@ -12,7 +12,7 @@ import org.fourthline.cling.model.meta.Service;
 import org.fourthline.cling.support.avtransport.callback.GetPositionInfo;
 import org.fourthline.cling.support.model.PositionInfo;
 
-import tk.munditv.mtvservice.util.Action;
+import tk.munditv.libtvservice.util.Action;
 
 public class GetPositionInfoCallback extends GetPositionInfo {
 
