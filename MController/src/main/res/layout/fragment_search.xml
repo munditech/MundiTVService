@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:text="Youtube Keywords Search" />
+        android:text="@string/label_keywords" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:textSize="18sp"
-            android:text="Search Text" />
+            android:hint="Search Text" />
 
         <ImageView
             android:id="@+id/btn_micphone"

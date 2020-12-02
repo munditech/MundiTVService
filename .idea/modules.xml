@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MundiTVService.iml" filepath="$PROJECT_DIR$/.idea/modules/MundiTVService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MController/MundiTVService.MController.iml" filepath="$PROJECT_DIR$/.idea/modules/MController/MundiTVService.MController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TVService/MundiTVService.TVService.iml" filepath="$PROJECT_DIR$/.idea/modules/TVService/MundiTVService.TVService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libclingupnp/MundiTVService.libclingupnp.iml" filepath="$PROJECT_DIR$/.idea/modules/libclingupnp/MundiTVService.libclingupnp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libtvservice/MundiTVService.libtvservice.iml" filepath="$PROJECT_DIR$/.idea/modules/libtvservice/MundiTVService.libtvservice.iml" />
+    </modules>
+  </component>
+</project>

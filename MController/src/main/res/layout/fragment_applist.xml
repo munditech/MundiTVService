@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:text="SoundBar Devices : " />
+        android:text="@string/label_devices" />
 
     <Spinner
         android:id="@+id/dmr_devices"

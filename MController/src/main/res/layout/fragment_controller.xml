@@ -20,19 +20,19 @@
                 android:id="@+id/btn_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TV" />
+                android:text="@string/btn_tv" />
 
             <Button
                 android:id="@+id/btn_vod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VOD" />
+                android:text="@string/btn_vod" />
 
             <Button
                 android:id="@+id/btn_karaoka"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Karaoka" />
+                android:text="@string/btn_karaoka" />
 
         </TableRow>
 
@@ -45,19 +45,19 @@
                 android:id="@+id/btn_music"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Music" />
+                android:text="@string/btn_music" />
 
             <Button
                 android:id="@+id/btn_game"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="game" />
+                android:text="@string/btn_game" />
 
             <Button
                 android:id="@+id/btn_youtube"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="youtube" />
+                android:text="@string/btn_youtube" />
         </TableRow>
 
         <TableRow
@@ -141,7 +141,7 @@
                 android:id="@+id/btn_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete" />
+                android:text="@string/btn_delete" />
 
             <Button
                 android:id="@+id/btn_0"
@@ -153,7 +153,7 @@
                 android:id="@+id/btn_recall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recall" />
+                android:text="@string/btn_recall" />
 
         </TableRow>
 
@@ -166,19 +166,19 @@
                 android:id="@+id/btn_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Menu" />
+                android:text="@string/btn_menu" />
 
             <Button
                 android:id="@+id/btn_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Up" />
+                android:text="@string/btn_up" />
 
             <Button
                 android:id="@+id/btn_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Back" />
+                android:text="@string/btn_back" />
         </TableRow>
 
         <TableRow
@@ -190,19 +190,19 @@
                 android:id="@+id/btn_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Left" />
+                android:text="@string/btn_left" />
 
             <Button
                 android:id="@+id/btn_enter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ok" />
+                android:text="@string/btn_ok" />
 
             <Button
                 android:id="@+id/btn_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Right" />
+                android:text="@string/btn_right" />
         </TableRow>
 
         <TableRow
@@ -214,19 +214,19 @@
                 android:id="@+id/btn_help"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Help" />
+                android:text="@string/btn_help" />
 
             <Button
                 android:id="@+id/btn_down"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Down" />
+                android:text="@string/btn_down" />
 
             <Button
                 android:id="@+id/btn_guide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Guide" />
+                android:text="@string/btn_guide" />
         </TableRow>
     </TableLayout>
 </LinearLayout>
