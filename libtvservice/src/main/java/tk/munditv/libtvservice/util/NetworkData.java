@@ -2,6 +2,8 @@ package tk.munditv.libtvservice.util;
 
 import org.fourthline.cling.android.AndroidUpnpService;
 
+import java.net.InetAddress;
+
 import tk.munditv.libtvservice.dmp.DeviceItem;
 
 public class NetworkData {
@@ -12,8 +14,11 @@ public class NetworkData {
     private static String serverName;
     private static int slideTime;
     private static DeviceItem dmrDeviceItem;
+    public static DeviceItem dmsDeviceItem;
+
     private static boolean isLocalDmr = false;
     public static AndroidUpnpService upnpService;
+    private static InetAddress inetAddress;
 
     public static void setHostName(String hostNameString) {
         hostName = hostNameString;
@@ -21,6 +26,10 @@ public class NetworkData {
 
     public static void setHostAddress(String hostAddressString) {
         hostAddress = hostAddressString;
+    }
+
+    public static void setLocalIpAddress(InetAddress inetAddr) {
+        inetAddress = inetAddr;
     }
 
     public static void setRenderName(String renderNameString) {
@@ -39,6 +48,10 @@ public class NetworkData {
         dmrDeviceItem = dmrItem;
     }
 
+    public static void setDmsDeviceItem(DeviceItem dmsItem) {
+        dmsDeviceItem = dmsItem;
+    }
+
     public static void setLocalDmr(Boolean dmrflag) {
         isLocalDmr = dmrflag;
     }
@@ -55,6 +68,10 @@ public class NetworkData {
         return hostAddress;
     }
 
+    public static InetAddress getLocalIpAddress() {
+        return inetAddress;
+    }
+
     public static String getRenderName() {
         return renderName;
     }
@@ -69,6 +86,10 @@ public class NetworkData {
 
     public static DeviceItem getDmrDeviceItem() {
         return dmrDeviceItem;
+    }
+
+    public static DeviceItem getDmsDeviceItem() {
+        return dmsDeviceItem;
     }
 
     public static boolean getIsLocalDmr() {

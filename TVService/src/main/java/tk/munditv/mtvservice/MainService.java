@@ -1,10 +1,12 @@
 package tk.munditv.mtvservice;
 
+import android.app.Notification;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
@@ -29,9 +31,10 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 
 import tk.munditv.libtvservice.dmp.DeviceItem;
+import tk.munditv.libtvservice.util.ConfigData;
 import tk.munditv.libtvservice.util.NetworkData;
+import tk.munditv.libtvservice.util.Packages;
 import tk.munditv.mtvservice.activity.SettingActivity;
-import tk.munditv.mtvservice.application.BaseApplication;
 import tk.munditv.mtvservice.dmr.MOSMediaRenderer;
 
 public class MainService extends Service {
@@ -119,15 +122,16 @@ public class MainService extends Service {
 
     private void setIp(InetAddress inetAddress) {
         Log.d(TAG, "setIp()");
-        BaseApplication.setLocalIpAddress(inetAddress);
+        NetworkData.setLocalIpAddress(inetAddress);
     }
 
     private void setIpInfo() {
         Log.d(TAG, "setIpInfo()");
         Log.d(TAG, "hostName = " + hostName);
         Log.d(TAG, "hostAddress = " + hostAddress);
-        BaseApplication.setHostName(hostName);
-        BaseApplication.setHostAddress(hostAddress);
+        NetworkData.setHostName(hostName);
+        NetworkData.setHostAddress(hostAddress);
+
     }
 
     @Override
@@ -135,6 +139,9 @@ public class MainService extends Service {
         super.onCreate();
         Log.d(TAG, "onCreate()");
         mContext = this;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForeground(1,new Notification());
+        }
     }
 
     @Nullable
@@ -147,7 +154,7 @@ public class MainService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG, "onStartCommand(intent, "+ flags + ", " + startId + ")");
-        BaseApplication.initApps(this);
+        initApps(this);
         getIp();
         deviceListRegistryListener = new DeviceListRegistryListener();
         getApplicationContext().bindService(
@@ -177,6 +184,11 @@ public class MainService extends Service {
         upnpService.getControlPoint().search();
     }
 
+    public static void initApps(Context context) {
+        Packages pkg = new Packages(context);
+        ConfigData.apps = pkg.getPackages();
+    }
+
     private ServiceConnection serviceConnection = new ServiceConnection() {
 
         public void onServiceConnected(ComponentName className, IBinder service) {
@@ -186,7 +198,7 @@ public class MainService extends Service {
             mDmrList.clear();
 
             upnpService = (AndroidUpnpService) service;
-            BaseApplication.setUpnpService(upnpService);
+            NetworkData.setUpnpService(upnpService);
             NetworkData.setRenderName(SettingActivity.getRenderName(getApplicationContext()));
 
             Log.d(TAG, "Connected to UPnP Service");
@@ -217,12 +229,11 @@ public class MainService extends Service {
 
             // select first device by default
             if (null != mDevList && mDevList.size() > 0
-                    && null == BaseApplication.deviceItem) {
-                BaseApplication.deviceItem = mDevList.get(0);
+                    && null == NetworkData.getDmsDeviceItem()) {
+                NetworkData.setDmsDeviceItem(mDevList.get(0));
             }
             if (null != mDmrList && mDmrList.size() > 0
-                    && null == BaseApplication.dmrDeviceItem) {
-                BaseApplication.dmrDeviceItem = mDmrList.get(0);
+                    && null == NetworkData.getDmrDeviceItem()) {
                 NetworkData.setdmrDeviceItem(mDmrList.get(0));
                 Log.d(TAG, "DMR NAME = " + mDmrList.get(0).getDevice().getDetails().getFriendlyName());
             }
