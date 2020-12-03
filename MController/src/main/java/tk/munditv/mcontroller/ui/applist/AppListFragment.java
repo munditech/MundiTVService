@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import tk.munditv.libtvservice.dmc.DMCControl;
+import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.mcontroller.R;
-import tk.munditv.mcontroller.app.MainApplication;
 import tk.munditv.mcontroller.view.AppListAdapter;
 
 public class AppListFragment extends Fragment {
@@ -56,10 +56,10 @@ public class AppListFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(TAG, "onItemSelected()");
 
-                MainApplication.dmrDeviceItem = MainApplication.mDmrList.get(position);
+                NetworkData.setdmrDeviceItem(NetworkData.mDmrList.get(position));
                 dmcControl = new DMCControl(null,
-                        3, MainApplication.dmrDeviceItem,
-                        MainApplication.upnpService,
+                        3, NetworkData.getDmrDeviceItem(),
+                        NetworkData.getUpnpService(),
                         null, null,  appListViewModel);
                 dmcControl.getPackages();
             }
@@ -69,10 +69,10 @@ public class AppListFragment extends Fragment {
                 Log.d(TAG, "onNothingSelected()");
 
                 parent.setSelection(0);
-                MainApplication.dmrDeviceItem = MainApplication.mDmrList.get(0);
+                NetworkData.setdmrDeviceItem(NetworkData.mDmrList.get(0));
                 dmcControl = new DMCControl(null,
-                        3, MainApplication.dmrDeviceItem,
-                        MainApplication.upnpService,
+                        3, NetworkData.getDmrDeviceItem(),
+                        NetworkData.getUpnpService(),
                         null, null, appListViewModel);
                 dmcControl.getPackages();
             }

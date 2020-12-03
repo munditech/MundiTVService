@@ -22,11 +22,11 @@ import java.io.IOException;
 
 import tk.munditv.libtvservice.dms.HttpServer;
 import tk.munditv.libtvservice.util.FileUtil;
+import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.libtvservice.util.UpnpUtil;
 import tk.munditv.libtvservice.util.Utils;
 import tk.munditv.libtvservice.dms.ContentDirectoryService;
 import tk.munditv.mcontroller.SettingsActivity;
-import tk.munditv.mcontroller.app.MainApplication;
 
 public class MediaServer {
 
@@ -88,7 +88,7 @@ public class MediaServer {
     public String getAddress() {
         Log.d(TAG, "getAddress()");
 
-        return MainApplication.getHostAddress() + ":" + PORT;
+        return NetworkData.getHostAddress() + ":" + PORT;
     }
 
     protected Icon createDefaultDeviceIcon() {

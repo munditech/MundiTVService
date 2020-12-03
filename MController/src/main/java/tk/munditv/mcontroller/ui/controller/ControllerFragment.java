@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 
 import tk.munditv.libtvservice.dmp.DeviceItem;
 import tk.munditv.libtvservice.dmc.DMCControl;
+import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.mcontroller.R;
-import tk.munditv.mcontroller.app.MainApplication;
 
 public class ControllerFragment extends Fragment {
 
@@ -54,7 +54,7 @@ public class ControllerFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView()");
 
-        targetDMR = MainApplication.dmrDeviceItem;
+        targetDMR = NetworkData.getDmrDeviceItem();
         Log.d(TAG, "targetDMR = " + targetDMR.getDevice().getDisplayString());
 
         View root = inflater.inflate(R.layout.fragment_controller, container, false);
@@ -115,8 +115,8 @@ public class ControllerFragment extends Fragment {
         btn_guide.setOnClickListener(listener);
 
         dmcControl = new DMCControl(null,
-                3, MainApplication.dmrDeviceItem,
-                MainApplication.upnpService, null, null, null);
+                3, NetworkData.getDmrDeviceItem(),
+                NetworkData.getUpnpService(), null, null, null);
 
         return root;
     }

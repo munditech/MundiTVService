@@ -3,6 +3,7 @@ package tk.munditv.libtvservice.util;
 import org.fourthline.cling.android.AndroidUpnpService;
 
 import java.net.InetAddress;
+import java.util.ArrayList;
 
 import tk.munditv.libtvservice.dmp.DeviceItem;
 
@@ -14,10 +15,12 @@ public class NetworkData {
     private static String serverName;
     private static int slideTime;
     private static DeviceItem dmrDeviceItem;
-    public static DeviceItem dmsDeviceItem;
+    private static DeviceItem dmsDeviceItem;
+    public static ArrayList<DeviceItem> mDevList = null;
+    public static ArrayList<DeviceItem> mDmrList = null;
 
     private static boolean isLocalDmr = false;
-    public static AndroidUpnpService upnpService;
+    private static AndroidUpnpService upnpService;
     private static InetAddress inetAddress;
 
     public static void setHostName(String hostNameString) {

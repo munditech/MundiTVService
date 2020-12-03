@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModel;
 import java.util.ArrayList;
 
 import tk.munditv.libtvservice.dmp.DeviceItem;
+import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.mcontroller.app.MainApplication;
 
 public class DMRListViewModel extends ViewModel
@@ -23,8 +24,8 @@ public class DMRListViewModel extends ViewModel
         Log.d(TAG, "DMRListViewModel()");
         mDmrLists = new MutableLiveData<>();
         MainApplication.getInstance().setCallback(this);
-        if (MainApplication.mDmrList != null)
-            refresh(MainApplication.mDmrList);
+        if (NetworkData.mDmrList != null)
+            refresh(NetworkData.mDmrList);
         return;
     }
 

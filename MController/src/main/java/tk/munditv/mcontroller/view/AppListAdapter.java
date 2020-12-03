@@ -16,10 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import tk.munditv.libtvservice.util.NetworkData;
 import tk.munditv.libtvservice.util.PInfo;
 import tk.munditv.libtvservice.dmc.DMCControl;
 import tk.munditv.mcontroller.R;
-import tk.munditv.mcontroller.app.MainApplication;
 
 public class AppListAdapter extends RecyclerView.Adapter {
 
@@ -53,8 +53,8 @@ public class AppListAdapter extends RecyclerView.Adapter {
             public void onClick(View v) {
                 PInfo info = (PInfo) v.getTag();
                 DMCControl dmcControl = new DMCControl(null,
-                        3, MainApplication.dmrDeviceItem,
-                        MainApplication.upnpService,
+                        3, NetworkData.getDmrDeviceItem(),
+                        NetworkData.getUpnpService(),
                         null, null, null);
                 String name = "[COMMAND]" + info.getAppname();
                 dmcControl.setCommand(name);

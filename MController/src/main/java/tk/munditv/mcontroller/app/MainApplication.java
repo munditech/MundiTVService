@@ -42,19 +42,13 @@ public class MainApplication extends Application {
 
     private static final String TAG = MainApplication.class.getSimpleName();
 
-    public static AndroidUpnpService upnpService;
+    private static AndroidUpnpService upnpService;
     public static Context mContext;
-    private static InetAddress inetAddress;
-    private static String hostAddress;
-    private static String hostName;
     private static boolean serverPrepared = false;
     private DeviceListRegistryListener deviceListRegistryListener = new DeviceListRegistryListener();
-    public static DeviceItem deviceItem;
-    public static DeviceItem dmrDeviceItem;
-    public static ArrayList<DeviceItem> mDevList = null;
-    public static ArrayList<DeviceItem> mDmrList = null;
+    private static DeviceItem deviceItem;
+    private static DeviceItem dmrDeviceItem;
     public static boolean isLocalDmr = true;
-    public static ArrayList<PInfo> apps;
     private MediaServer mediaServer;
     private static MainApplication mInstance;
     private DMRListCallback callback;
@@ -64,11 +58,12 @@ public class MainApplication extends Application {
         public void onServiceConnected(ComponentName className, IBinder service) {
             Log.d(TAG, "serviceConnection -- onServiceConnected()");
 
-            if (mDevList == null) mDevList = new ArrayList<DeviceItem>();
-            if (mDmrList == null) mDmrList = new ArrayList<DeviceItem>();
-            mDevList.clear();
-            mDmrList.clear();
+            if (NetworkData.mDevList == null) NetworkData.mDevList = new ArrayList<DeviceItem>();
+            if (NetworkData.mDmrList == null) NetworkData.mDmrList = new ArrayList<DeviceItem>();
+            NetworkData.mDevList.clear();
+            NetworkData.mDmrList.clear();
 
+            NetworkData.setUpnpService((AndroidUpnpService) service);
             upnpService = (AndroidUpnpService) service;
 
             Log.d(TAG, "Connected to UPnP Service");
@@ -131,13 +126,13 @@ public class MainApplication extends Application {
             upnpService.getControlPoint().search();
 
             // select first device by default
-            if (null != mDevList && mDevList.size() > 0
-                    && null == deviceItem) {
-                deviceItem = mDevList.get(0);
+            if (null != NetworkData.mDevList && NetworkData.mDevList.size() > 0
+                    && null == NetworkData.getDmsDeviceItem()) {
+                NetworkData.setDmsDeviceItem(NetworkData.mDevList.get(0));
             }
-            if (null != mDmrList && mDmrList.size() > 0
-                    && null == dmrDeviceItem) {
-                dmrDeviceItem = mDmrList.get(0);
+            if (null != NetworkData.mDmrList && NetworkData.mDmrList.size() > 0
+                    && null == NetworkData.getDmrDeviceItem()) {
+                NetworkData.setdmrDeviceItem(NetworkData.mDmrList.get(0));
             }
         }
 
@@ -236,34 +231,34 @@ public class MainApplication extends Application {
         public void deviceAdded(final DeviceItem di) {
             Log.d(TAG, "deviceAdded()");
 
-            if (!mDevList.contains(di)) {
-                mDevList.add(di);
+            if (!NetworkData.mDevList.contains(di)) {
+                NetworkData.mDevList.add(di);
             }
         }
 
         public void deviceRemoved(final DeviceItem di) {
             Log.d(TAG, "deviceRemoved()");
 
-            mDevList.remove(di);
+            NetworkData.mDevList.remove(di);
         }
 
         public void dmrAdded(final DeviceItem di) {
             Log.d(TAG, "dmrAdded()");
 
-            if (!mDmrList.contains(di)) {
-                mDmrList.add(di);
+            if (!NetworkData.mDmrList.contains(di)) {
+                NetworkData.mDmrList.add(di);
             }
             if (callback != null) {
-                callback.refresh(mDmrList);
+                callback.refresh(NetworkData.mDmrList);
             }
         }
 
         public void dmrRemoved(final DeviceItem di) {
             Log.d(TAG, "dmrRemoved()");
 
-            mDmrList.remove(di);
+            NetworkData.mDmrList.remove(di);
             if (callback != null) {
-                callback.refresh(mDmrList);
+                callback.refresh(NetworkData.mDmrList);
             }
         }
     }
@@ -327,7 +322,7 @@ public class MainApplication extends Application {
                 NetworkInterface intf = en.nextElement();
                 for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
                     InetAddress mInetAddress = enumIpAddr.nextElement();
-                    if (!mInetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address) {
+                    if (!mInetAddress.isLoopbackAddress() && mInetAddress instanceof Inet4Address) {
                         return mInetAddress;
                     }
                 }
@@ -345,32 +340,23 @@ public class MainApplication extends Application {
             @Override
             public void run() {
                 Log.d(TAG, "getIp() Thread inside : run()");
-                inetAddress = getLocalIpAddress();;
+                InetAddress inetAddress = getLocalIpAddress();;
                 if (inetAddress != null) {
-                    hostName = inetAddress.getHostName();
-                    hostAddress = inetAddress.getHostAddress();
+                    NetworkData.setHostName(inetAddress.getHostName());
+                    NetworkData.setHostAddress(inetAddress.getHostAddress());
                 }
                 return;
             }
         }).start();
     }
 
-    public static String getHostAddress() {
-        Log.d(TAG, "getHostAddress()");
-        return hostAddress;
-    }
-
-    public static String getHostName() {
-        Log.d(TAG, "getHostName()");
-        return hostName;
-    }
-
     public static void initApps(Context context) {
         Log.d(TAG, "initApps()");
 
         Packages pkg = new Packages(context);
-        apps = pkg.getPackages();
-        ConfigData.apps = apps;
+        ConfigData.apps = pkg.getPackages();
+
+
     }
 
     public static Context getContext() {
