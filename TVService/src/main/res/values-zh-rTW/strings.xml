@@ -98,5 +98,6 @@
 
     <!-- Menu -->
     <string name="menu_exit">退出</string>
+    <string name="message_accessibility_service_details">RCKey Service</string>
 
 </resources>

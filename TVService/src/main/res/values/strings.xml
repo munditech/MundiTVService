@@ -98,4 +98,5 @@
     <!-- Menu -->
     <string name="menu_exit">exit</string>
 
+    <string name="message_accessibility_service_details">RCKey Service</string>
 </resources>

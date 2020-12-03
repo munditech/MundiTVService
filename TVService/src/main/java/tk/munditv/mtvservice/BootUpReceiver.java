@@ -18,8 +18,10 @@ public class BootUpReceiver extends BroadcastReceiver {
             Log.d(TAG, "intent.getAction() is equals to " + intent.getAction());
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 context.startForegroundService(new Intent(context, MainService.class));
+                context.startForegroundService(new Intent(context, RCKeyService.class));
             } else {
                 context.startService(new Intent(context, MainService.class));
+                context.startService(new Intent(context, RCKeyService.class));
             }
         }
         return;
