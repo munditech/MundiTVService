@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TVService</string>
+
+    <string name="title_activity_settings">設定</string>
+    <string name="deviceDetails">裝置詳情</string>
+    <string name="searchLAN">搜尋網路</string>
+    <string name="switchRouter">切換網路路由</string>
+    <string name="toggleDebugLogging">切换debug logging</string>
+    <string name="OK">OK</string>
+    <string name="searchingLAN">正在搜尋網路中的Upnp裝置&#8230;</string>
+    <string name="enablingRouter">Enabling network router&#8230;</string>
+    <string name="disablingRouter">Disabling network router&#8230;</string>
+    <string name="errorSwitchingRouter">Error switching router: </string>
+    <string name="enablingDebugLogging">Enabling debug logging&#8230;</string>
+    <string name="disablingDebugLogging">Disabling debug logging&#8230;</string>
+    <string name="deviceDetailsNotYetAvailable">Device details are being discovered, please wait.</string>
+    <string name="search_lan">搜尋裝置</string>
+    <string name="toggle_debug_logging">Toggle debug logging</string>
+    <string name="searching_lan">正在搜尋網路中的Upnp裝置&#8230;</string>
+    <string name="enabling_debug_logging">Enabling debug logging&#8230;</string>
+    <string name="disabling_debug_logging">Disabling debug logging&#8230;</string>
+    <string name="registering_demo_device">Registering UPnP device&#8230;</string>
+    <string name="create_demo_failed">Creating of device failed, check the log!</string>
+    <string name="sear_dmr">Find DMR</string>
+    <string name="dialog_wait_msg">正在處理中&#8230;</string>
+    <string name="player_play_msg">播放</string>
+    <string name="player_pause_msg">暂停</string>
+    <string name="ip_get_fail">取得IP地址失敗</string>
+
+    <!-- tab -->
+    <string name="device">裝置</string>
+    <string name="content">内容</string>
+    <string name="control">控制台</string>
+    <string name="setting">設定</string>
+
+    <!-- control -->
+    <string name="not_select_dev">請選擇裝置</string>
+    <string name="get_data_err">資料取得失敗，請重新選擇檔案</string>
+    <string name="conn_err">建立連接失敗</string>
+    <string name="min_voc">已经是最小音量了</string>
+    <string name="media_name_def">媒體名稱</string>
+    <string name="media_name_brief">媒體簡介</string>
+    <string name="media_init_time">00:00:00</string>
+    <string name="media_play_err">播放失敗</string>
+    
+    <!-- device -->
+    <string name="device_msg">媒體內容服務</string>
+    <string name="dmr_msg">播放器</string>
+    <string name="exit">再按一次退出程式</string>
+
+    <!-- imageDispaly -->
+    <string name="io_error">IO錯誤</string>
+    <string name="decoding_error">圖片解碼錯誤</string>
+    <string name="network_denied">網路拒絕連線</string>
+    <string name="oom_error">圖片過大無法載入</string>
+    <string name="unknown_error">未知錯誤</string>
+    <string name="info_first_image">到第一張圖片了</string>
+    <string name="info_last_image">到最後一張圖片了</string>
+    <string name="info_image_slide_start">放映圖片幻燈片開始</string>
+    <string name="info_image_slide_pause">暂停圖片幻燈片放映</string>
+    <string name="info_download_image">圖片已經下載到</string>
+    <string name="info_download_image_error">圖片保存失敗</string>
+    <string name="info_share_image">分享圖片</string>
+
+    <!-- player -->
+    <string name="player_bt_return">返回</string>
+    <string name="player_exit">再按一次返回鍵退出播放器</string>
+
+    <!-- setting -->
+    <string name="about_app">版本2.0.0</string>
+    <string name="open_msg">開</string>
+    <string name="off_msg">關</string>
+    <string name="share_content">共享媒體内容</string>
+    <string name="share_content_on">啟動共享内容，其他设备可以通过DLNA/Upnp协议查看本機媒體檔案</string>
+    <string name="share_content_off">停止共享内容，其他设备不可以通过DLNA/Upnp协议查看本機媒體檔案</string>
+    <string name="share_content_setting">共享媒體内容設定</string>
+    <string name="share_content_setting_breif">與家人朋友共享您喜歡的内容</string>
+    <string name="device_name">裝置名稱</string>
+    <string name="dms_name">媒體伺服器名稱</string>
+    <string name="dms_name_breif">本地媒體伺服器名稱，,你可以在其他裝置找到它</string>
+    <string name="device_local">MundiTV Media Server</string>
+    <string name="player">媒體播放器</string>
+    <string name="player_on">開啟本地播放器服務,其他裝置可以通過DLNA/Upnp協定推送媒體文件到本機</string>
+    <string name="player_off">關閉本地播放器服務,其他裝置不可以通過DLNA/Upnp協定推送媒體文件到本機</string>
+    <string name="player_name">播放器名稱</string>
+    <string name="player_name_breif">本地播放器名稱,你可以在其他裝置找到它</string>
+    <string name="player_name_local">MundiTV Local Render</string>
+    <string name="net_setting">網路設定</string>
+    <string name="net_setting_breif">設定及管理無線網路接入點</string>
+    <string name="slideshow">幻燈片</string>
+    <string name="slideshow_breif">設定播放幻燈片的間隔時間</string>
+    <string name="thumbnails">縮放圖案</string>
+    <string name="thumbnails_breif">縮放團案隱藏</string>
+    <string name="setting_msg">設定</string>
+    <string name="about_brief">TVService，通过无线网手机和电视/电脑/等实现多媒体的共享，轻松互相浏览/播放/控制各设备存储中的音乐、视频以及图片等.\nMundiDLNA具备如下功能：\n1支持DLNA所有协议(包括：DMP,DMS,DMC,DMR)，集DLNA播放器、DLNA服务器、DLNA客户端和DLNA播放控制器一体，功能丰富；\n 2 通过wifi和以太网自动扫描UPnP/DLNA媒体服务获得共享资源；\n 3 可以共享设备上多媒体资源给别人，也可以使用其他DLNA设备的多媒体资源；\n 4 可以浏览，播放，控制多媒体资源，支持图片和视频缩略图显示。</string>
+
+    <!-- Menu -->
+    <string name="menu_exit">退出</string>
+
+</resources>

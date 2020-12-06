@@ -2,4 +2,5 @@ include ':libtvservice'
 include ':libclingupnp'
 include ':MController'
 include ':TVService'
+include ':TVService-kt'
 rootProject.name = "MundiTVService"
